@@ -1,0 +1,246 @@
+@font-face {
+    font-family: 'Lato', sans-serif;
+    font-family: 'Modak', cursive;
+    font-family: 'Lobster', cursive;
+}
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: 1;
+  text-decoration: none;
+  font-family: "Monserrat";
+  color: #332f2c;
+  background-color: #fefbea;
+}
+
+body{
+  font-family: 'Open Sans', sans-serif;
+  line-height: 1;
+  /*para borrar*/
+  margin:0;
+  padding: 0;
+  list-style: none;
+  text-decoration: none;
+  display: grid;
+  min-height: 100vh;
+  grid-column: auto 1fr auto;
+}
+
+section{
+  
+  transition: all.5s ;
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+}
+
+#check:checked ~ section{
+  margin-left: 250px;
+}
+
+#imagen-portada{
+  border: 20px transparent;
+  float: left;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  margin-left: 100px;
+  height: 50px;
+  /*
+  background-clip: padding-box; 
+  max-width:80%;
+  width:auto;
+  height:auto;
+  */
+}
+
+#frase{
+  text-align: right;
+  padding: 2%;
+}
+
+
+.sidebar{
+  position: fixed;
+  width: 240px;
+  left: -240px;
+  height: 100%;
+  background: #1e1e1e;
+  transition: all .5s ease;
+}
+.sidebar header{
+  font-size: 28px;
+  color: white;
+  line-height: 70px;
+  text-align: center;
+  background: #1b1b1b;
+  user-select: none;
+  font-family: 'Montserrat', sans-serif;
+}
+.sidebar a{
+  background: #1b1b1b;
+  display: block;
+  height: 65px;
+  width: 100%;
+  color: white;
+  line-height: 65px;
+  padding-left: 30px;
+  box-sizing: border-box;
+  border-bottom: 1px solid black;
+  border-top: 1px solid rgba(255,255,255,.1);
+  border-left: 5px solid transparent;
+  font-family: 'Open Sans', sans-serif;
+  transition: all .5s ease;
+}
+a.active,a:hover{
+  border-left: 5px solid #528dca;
+  color: #528dca;
+}
+.sidebar a i{
+  font-size: 23px;
+  margin-right: 16px;
+}
+.sidebar a span{
+  background: #1b1b1b;
+  letter-spacing: 1px;
+  /*texto en mayuscula con   text-transform: uppercase;*/
+}
+#check{
+  display: none;
+}
+label #btn,label #cancel{
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  border-radius: 5px;
+  border: 1px solid #262626;
+  margin: 15px 30px;
+  font-size: 29px;
+  background: #262626;
+  height: 25px;
+  width: 25px;
+  text-align: center;
+  line-height: 45px;
+  transition: all .5s ease;
+}
+label #cancel{
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ .sidebar{
+  left: 0;
+}
+#check:checked ~ label #btn{
+  margin-left: 245px;
+  opacity: 0;
+  visibility: hidden;
+}
+#check:checked ~ label #cancel{
+  margin-left: 245px;
+  opacity: 1;
+  visibility: visible;
+}
+@media(max-width : 860px){
+  .sidebar{
+    height: auto;
+    width: 70px;
+    left: 0;
+    margin: 100px 0;
+  }
+  header,#btn,#cancel{
+    display: none;
+  }
+  span{
+    position: absolute;
+    margin-left: 23px;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .sidebar a{
+    height: 60px;
+  }
+  .sidebar a i{
+    margin-left: -10px;
+  }
+  a:hover {
+    width: 200px;
+    background: inherit;
+  }
+  .sidebar a:hover span{
+    opacity: 1;
+    visibility: visible;
+  }
+}
+
+.menu-text{
+  color: white;
+}
+
+
+ol,ul{list-style:none}
+
+p{
+  font-size:16px;
+}
+
+h1{
+  margin-left: 5%;
+  margin-top: 0;
+}
+
+h2{
+  font-size: 28px;
+  font-weight: 800;
+  text-align: center;
+  color: #a07451;
+  margin: 15px;
+  /*background-color: #e4f4fd;*/
+}
+
+footer{
+  font-size: 20px;
+  clear: both;
+  background-color: rgb(240, 240, 240);
+  text-align: center;
+  padding: 30px;
+  margin-top: auto;
+  box-sizing: border-box;
+  /*font-weight: 800;*/
+}
+
+.textos{
+  padding: 2%;
+  text-align: center;
+}
+
+/*This is the scroll bar*/
+::-webkit-scrollbar{
+    width: 10px;
+}
+::-webkit-scrollbar-track{
+    background: white;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #f7e4e8; /*#E9E1CC*/
+}
+
+
+.bloque{
+  clear: both;
+  margin-top: 5%;
+  margin-bottom: 5%;
+  margin-left: 10%;
+  margin-right: 10%;
+  padding: 2%;
+}
+
+.textos-secciones{
+  display: inline-block;
+  margin-left: 10%;
+  margin-right: 12%;
+  padding: 5%;
+}
+
+
+
+
